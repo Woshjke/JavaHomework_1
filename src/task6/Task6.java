@@ -2,10 +2,8 @@ package task6;
 
 import java.util.Scanner;
 
-public class Task6
-{
-    public static void main(String[] args)
-    {
+public class Task6 {
+    public static void main(String[] args) {
         String ticketNumber;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input ticket number: ");
