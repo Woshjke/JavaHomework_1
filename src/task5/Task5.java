@@ -15,11 +15,15 @@ public class Task5 {
 
         while (true) {
             System.out.println("Введите число: ");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Это не число! Попытайтесь снова: ");
+                scanner.next();
+            }
             number = scanner.nextInt();
             if (number == 0) break;
             numArray.add(number);
         }
-        System.out.println("Вышел из цыкла");
+        System.out.println("Вышел из цикла");
         for (Integer i : numArray) {
             countOfNumbers++;
             sumOfNumbers += i;

@@ -2,11 +2,11 @@ package task4;
 
 public class BankAccount {
     private int value;
-    private double procent;
+    private double percent;
 
-    BankAccount(int value, double procent) {
+    BankAccount(int value, double percent) {
         this.value = value;
-        this.procent = procent;
+        this.percent = percent;
     }
 
     public void doubleValue() {
@@ -14,7 +14,7 @@ public class BankAccount {
         int mounthCount = 0;
         do {
             mounthCount++;
-            value += value * (procent / 100);
+            value += value * (percent / 100);
         }
         while (value < (startedValue * 2));
         System.out.println("Count of month needed to double your money value: " + mounthCount);

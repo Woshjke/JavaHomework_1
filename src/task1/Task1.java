@@ -1,18 +1,17 @@
 package task1;
 
+import java.util.Scanner;
+
 public class Task1 {
     public static void main(String[] args) {
-        fahrenheitToCelsius(33.2);
-        fahrenheitToCelsius(36.6);
-    }
-
-    /**
-     * This method converting Fahrenheit degrees into Celsius degrees
-     *
-     * @param fahrenheitTemperature - temperature in Fahrenheit degrees
-     */
-    private static void fahrenheitToCelsius(double fahrenheitTemperature) {
-        double celsiusTemperature = (fahrenheitTemperature - 32) * (5. / 8);
-        System.out.printf(" %.1f degrees in fahrenheit its %.1f degrees in celsius\n", fahrenheitTemperature, celsiusTemperature);
+        double temperatureInCelsius;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите температуту в градусах Фаренгейта");
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Неверный ввод! Попытайтесь снова: ");
+            scanner.next();
+        }
+        temperatureInCelsius = scanner.nextDouble();
+        Temperature.convertFahrenheitToCelsius(32.2);
     }
 }
