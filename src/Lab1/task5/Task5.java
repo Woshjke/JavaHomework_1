@@ -1,4 +1,4 @@
-package task5;
+package Lab1.task5;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Task5 {
         double average;
         List<Integer> numArray = new ArrayList<>();
 
-        while (true) {
+        while (number != 0) {
             System.out.println("Введите число: ");
             while (!scanner.hasNextInt()) {
                 System.out.println("Это не число! Попытайтесь снова: ");

@@ -1,28 +1,27 @@
-package task4;
+package Lab1.task7;
 
 import java.util.Scanner;
 
-public class Task4 {
+public class Task7 {
     public static void main(String[] args) {
-        int value, percent;
+        int numA, numB;
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Введите начальный вклад: ");
+        System.out.println("Введите первое число: ");
         while (!scanner.hasNextInt()) {
             System.out.println("Это не число! Попытайтесь снова: ");
             scanner.next();
         }
-        value = scanner.nextInt();
-
-        System.out.println("Введите процентную ставку: ");
+        numA = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Введите второе число: ");
         while (!scanner.hasNextInt()) {
             System.out.println("Это не число! Попытайтесь снова: ");
             scanner.next();
         }
-        percent = scanner.nextInt();
+        numB = scanner.nextInt();
+        scanner.nextLine();
 
-
-        BankAccount account = new BankAccount(value, percent);
-        account.doubleValue();
+        numsBetwen nums = new numsBetwen(numA, numB);
+        nums.output();
     }
 }

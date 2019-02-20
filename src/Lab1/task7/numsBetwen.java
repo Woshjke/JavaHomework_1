@@ -1,4 +1,4 @@
-package task7;
+package Lab1.task7;
 
 public class numsBetwen {
     private int firstNumber, secondNumber;
@@ -9,6 +9,8 @@ public class numsBetwen {
     }
 
     public void output() {
+        if (firstNumber == secondNumber) {System.out.println("Ввденые числа одинаковые!"); return;}
+        if (firstNumber <=0 || secondNumber <= 0) {System.out.println("Ошибка! Какое-то введенное число <= 0 "); return;}
         int smallerNum, biggerNum;
         if (firstNumber > secondNumber) {
             biggerNum = firstNumber;

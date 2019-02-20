@@ -1,4 +1,4 @@
-package task2;
+package Lab1.task2;
 
 public class Triangle {
     private double side1, side2, side3;

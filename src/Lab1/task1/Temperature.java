@@ -1,4 +1,4 @@
-package task1;
+package Lab1.task1;
 
 public class Temperature {
 

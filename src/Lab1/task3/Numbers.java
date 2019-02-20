@@ -1,4 +1,4 @@
-package task3;
+package Lab1.task3;
 
 public class Numbers {
 
