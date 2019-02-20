@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Task5 {
+
     public static void main(String[] args) {
         Integer number = -1;
         Scanner scanner = new Scanner(System.in);

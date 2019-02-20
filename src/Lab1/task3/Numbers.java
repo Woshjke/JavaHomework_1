@@ -7,6 +7,11 @@ public class Numbers {
     public static String[] units = {null, "один", "два", "три ", "четыре", "пять", "шесть", "семь", "весемь ", "девять"};
     public static String[] otherDigits = {null, "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"};
 
+    /**
+     * This method converting number to string representation
+     * @param number - Integer value of needed number
+     * @return String representation of the number
+     */
     public static String numberToString(int number) {
         StringBuilder answere = new StringBuilder();
         if (number < 100 || number > 999) {

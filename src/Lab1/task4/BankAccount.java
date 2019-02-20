@@ -9,6 +9,9 @@ public class BankAccount {
         this.percent = percent;
     }
 
+    /**
+     * This method considers how many months a bank account value will double at a given percent.
+     */
     public void doubleValue() {
         int startedValue = value;
         int mounthCount = 0;

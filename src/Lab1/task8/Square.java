@@ -11,6 +11,9 @@ public class Square {
         this.inside = inside;
     }
 
+    /**
+     * This method shows rectangle in a console
+     */
     public void show() {
         for (int i = 0; i < sizeX; i++) {
             for (int b = 0; b < sizeY; b++) {
