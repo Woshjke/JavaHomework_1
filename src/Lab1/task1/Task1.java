@@ -12,6 +12,6 @@ public class Task1 {
             scanner.next();
         }
         temperatureInCelsius = scanner.nextDouble();
-        Temperature.convertFahrenheitToCelsius(32.2);
+        Temperature.convertFahrenheitToCelsius(temperatureInCelsius);
     }
 }
