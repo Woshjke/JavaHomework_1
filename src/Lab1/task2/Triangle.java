@@ -15,6 +15,7 @@ public class Triangle {
 
     /**
      * This method calculete sides of triangle
+     *
      * @param a1 x-coordinate of first dot
      * @param a2 x - coordinate of second dot
      * @param b1 y-coordinate of first dot
@@ -27,10 +28,11 @@ public class Triangle {
 
     /**
      * This method calculate area of triangle
+     *
      * @param halfPerimetr - 1/2 of triangle perimetr
-     * @param side1 - first side of triangle
-     * @param side2 - second side of triangle
-     * @param side3 - third side of triangle
+     * @param side1        - first side of triangle
+     * @param side2        - second side of triangle
+     * @param side3        - third side of triangle
      * @return the area of a triangle
      */
     private double calculateArea(double halfPerimetr, double side1, double side2, double side3) {

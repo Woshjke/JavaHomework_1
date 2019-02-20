@@ -9,11 +9,11 @@ public class numsBetwen {
     }
 
     /**
-     * This method displays numbers in a given range as many times, equal to its value.
+     * This method displays numbers in a given range times, equal to its value.
      */
     public void output() {
         if (firstNumber == secondNumber) {System.out.println("Введеные числа одинаковые!"); return;}
-        if (firstNumber <=0 || secondNumber <= 0) {System.out.println("Ошибка! Какое-то введенное число <= 0 "); return;}
+        if (firstNumber <=0 || secondNumber <= 0) {System.out.println("Ошибка! Какое-то из введенных чисел <= 0"); return;}
         int smallerNum, biggerNum;
         if (firstNumber > secondNumber) {
             biggerNum = firstNumber;
