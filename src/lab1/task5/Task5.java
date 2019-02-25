@@ -1,4 +1,4 @@
-package Lab1.task5;
+package lab1.task5;
 
 public class Task5 {
 

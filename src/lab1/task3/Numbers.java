@@ -1,4 +1,4 @@
-package Lab1.task3;
+package lab1.task3;
 
 public class Numbers {
 
@@ -21,6 +21,9 @@ public class Numbers {
 
         for (int i = 0; i < arr.length; i++) {
 
+            //
+            //Обработка чисел от 11 до 19
+            //
             if (i == 1 && arr[1].equals("1")) {
                 if (arr[2].equals("1")) {
                     answere.append(otherDigits[1]);

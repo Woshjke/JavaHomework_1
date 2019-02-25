@@ -1,4 +1,4 @@
-package Lab1.task8;
+package lab1.task8;
 
 public class Square {
     private int sizeY, sizeX;

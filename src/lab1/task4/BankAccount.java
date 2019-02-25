@@ -1,4 +1,4 @@
-package Lab1.task4;
+package lab1.task4;
 
 public class BankAccount {
     private int value;
