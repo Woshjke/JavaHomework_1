@@ -1,13 +1,12 @@
 package lab2;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        task6(6, 6);
+        task4(6, 6, 5, 2);
     }
 
     private static void task1() {
@@ -72,6 +71,7 @@ public class Main {
         int num;
         int divideCount = 0;
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Input number: ");
         while (!scanner.hasNextInt()) {
             System.out.println("Not a number! Try again: ");
@@ -87,9 +87,11 @@ public class Main {
             }
             num = scanner.nextInt();
         }
+
         for (int i = 1; i <= num; i++) {
             if (num % i == 0) divideCount++;
         }
+
         if (divideCount == 2) {
             System.out.println("Primitive number!");
         } else {
@@ -97,50 +99,52 @@ public class Main {
         }
     }
 
-    private static void task4(int num, int delta) {
+    private static void task4(int sizeX, int sizeY, int num, int delta) {
         Random random = new Random();
-        Integer[][] arr = new Integer[5][5];
+        Integer[][] arr = new Integer[sizeX][sizeY];
 
-        //Заполнение массива
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                arr[i][j] = random.nextInt(50);
+        for (int i = 0; i < sizeX; i++) {
+            for (int j = 0; j < sizeY; j++) {
+                arr[i][j] = random.nextInt(10);
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        //task 3.1
+        System.out.println("Task 3.1 ///////////////////////////////");
+        for (int i = 0; i < sizeX; i++) {
+            for (int j = 0; j < sizeY; j++) {
                 if (arr[i][j] == num) {
-                    System.out.println("Coordinates of " + num + ": [" + i + "][" + j + "]");
+                    System.out.println("Coordinates of " + num + ": [" + (i + 1) + "][" + (j + 1) + "] in row №" + (i + 1));
                     break;
                 }
             }
         }
 
 
+        //task3.2
+        System.out.println("Task 3.2 ///////////////////////////////");
         int stepsCounter = 0;
 
-        loop1:
-        for (int i = 1; i < arr.length; i++) {
-            stepsCounter++;
-            for (int j = 1; j < arr.length; j++) {
+        loop:
+        for (int i = 0; i < sizeX; i++) {
+            for (int j = 0; j < sizeY; j++) {
                 stepsCounter++;
                 if (arr[i][j] == num) {
-                    System.out.println("Coordinates of " + num + ": [" + i + "][" + j + "]");
-                    System.out.println("Counter: " + stepsCounter);
-                }
-                if (j == arr.length - 1) {
-                    break loop1;
+                    System.out.println("Coordinates of " + num + ": [" + (i + 1) + "][" + (j + 1) + "]. Counter: " + stepsCounter);
+                    break loop;
                 }
             }
         }
 
+        //task 3.3
+        System.out.println("Task 3.3 ///////////////////////////////");
+
         stepsCounter = 0;
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < sizeX; i++) {
+            for (int j = 0; j < sizeY; j++) {
                 if (arr[i][j] < (num - delta) || arr[i][j] > (num + delta)) {
                     continue;
                 }
@@ -148,7 +152,7 @@ public class Main {
             }
         }
 
-        System.out.println("Counter = " + stepsCounter);
+        System.out.println("The quantity of numbers which is not getting to an interval: " + stepsCounter);
     }
 
     private static void task5(int arraySize) {
