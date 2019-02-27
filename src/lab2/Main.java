@@ -40,6 +40,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("Unknown command");
+                    break;
             }
         } else {
             System.out.println("Choose task!");
@@ -291,8 +292,6 @@ public class Main {
         List<String> deck = Utils.createDeck();
 
         System.out.println(deck.get(((int) (Math.random() * 52))));
-
-
     }
 
     private static void task10() {
