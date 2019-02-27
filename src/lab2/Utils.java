@@ -2,6 +2,7 @@ package lab2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Utils {
 
@@ -35,5 +36,14 @@ public class Utils {
             }
         }
         return arr;
+    }
+
+    static int integerInput(){
+        Scanner scanner = new Scanner(System.in);
+        while (!scanner.hasNextInt()) {
+            System.out.println("Not a number! Try again: ");
+            scanner.next();
+        }
+        return scanner.nextInt();
     }
 }

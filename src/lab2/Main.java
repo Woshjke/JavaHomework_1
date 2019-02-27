@@ -6,7 +6,44 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        task4(6, 6, 5, 2);
+        if (args.length > 0) {
+            switch (args[0]) {
+                case "1":
+                    task1();
+                    break;
+                case "2":
+                    task2();
+                    break;
+                case "3":
+                    task3();
+                    break;
+                case "4":
+                    task4(Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+                    break;
+                case "5":
+                    task5();
+                    break;
+                case "6":
+                    task6();
+                    break;
+                case "7":
+                    task7();
+                    break;
+                case "8":
+                    task8();
+                    break;
+                case "9":
+                    task9();
+                    break;
+                case "10":
+                    task10();
+                    break;
+                default:
+                    System.out.println("Unknown command");
+            }
+        } else {
+            System.out.println("Choose task!");
+        }
     }
 
     private static void task1() {
@@ -27,14 +64,17 @@ public class Main {
         }
     }
 
-    private static void task2(int arraySize, int bound) {
+    private static void task2() {
+        System.out.println("Input array size");
+        int arraySize = Utils.integerInput();
+
         List<Integer> arr = new ArrayList<>();
         Random random = new Random();
         int sum = 0;
 
         //заполнение массива
         for (int i = 0; i < arraySize; i++) {
-            arr.add(random.nextInt(bound));
+            arr.add(random.nextInt(10));
         }
 
         Integer minNum = Integer.MAX_VALUE;
@@ -73,11 +113,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Input number: ");
-        while (!scanner.hasNextInt()) {
-            System.out.println("Not a number! Try again: ");
-            scanner.next();
-        }
-        num = scanner.nextInt();
+        num = Utils.integerInput();
 
         while (num < 0) {
             System.out.println("Input error!");
@@ -99,12 +135,18 @@ public class Main {
         }
     }
 
-    private static void task4(int sizeX, int sizeY, int num, int delta) {
-        Random random = new Random();
-        Integer[][] arr = new Integer[sizeX][sizeY];
+    private static void task4(int num, int delta) {
+        int rows, columns;
+        System.out.println("Input number of rows");
+        rows = Utils.integerInput();
+        System.out.println("Input number of columns");
+        columns = Utils.integerInput();
 
-        for (int i = 0; i < sizeX; i++) {
-            for (int j = 0; j < sizeY; j++) {
+        Random random = new Random();
+        Integer[][] arr = new Integer[rows][columns];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 arr[i][j] = random.nextInt(10);
                 System.out.print(arr[i][j] + " ");
             }
@@ -113,8 +155,8 @@ public class Main {
 
         //task 3.1
         System.out.println("Task 3.1 ///////////////////////////////");
-        for (int i = 0; i < sizeX; i++) {
-            for (int j = 0; j < sizeY; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 if (arr[i][j] == num) {
                     System.out.println("Coordinates of " + num + ": [" + (i + 1) + "][" + (j + 1) + "] in row №" + (i + 1));
                     break;
@@ -128,8 +170,8 @@ public class Main {
         int stepsCounter = 0;
 
         loop:
-        for (int i = 0; i < sizeX; i++) {
-            for (int j = 0; j < sizeY; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 stepsCounter++;
                 if (arr[i][j] == num) {
                     System.out.println("Coordinates of " + num + ": [" + (i + 1) + "][" + (j + 1) + "]. Counter: " + stepsCounter);
@@ -143,8 +185,8 @@ public class Main {
 
         stepsCounter = 0;
 
-        for (int i = 0; i < sizeX; i++) {
-            for (int j = 0; j < sizeY; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 if (arr[i][j] < (num - delta) || arr[i][j] > (num + delta)) {
                     continue;
                 }
@@ -155,8 +197,8 @@ public class Main {
         System.out.println("The quantity of numbers which is not getting to an interval: " + stepsCounter);
     }
 
-    private static void task5(int arraySize) {
-        int[] arr = Utils.createRandomArr(arraySize, 10, 99);
+    private static void task5() {
+        int[] arr = Utils.createRandomArr(5, 10, 99);
 
         System.out.println(Arrays.toString(arr));
 
@@ -171,9 +213,15 @@ public class Main {
         System.out.println("Increasing array: " + isIncreasing);
     }
 
-    private static void task6(int sizeX, int sizeY) {
-        Character[][] arr = new Character[sizeX][sizeY];
+    private static void task6() {
+        Scanner scanner = new Scanner(System.in);
+        int sizeX, sizeY;
+        System.out.println("Input number of rows:");
+        sizeX = Utils.integerInput();
+        System.out.println("Input number of columns:");
+        sizeY = Utils.integerInput();
 
+        Character[][] arr = new Character[sizeX][sizeY];
 
         for (int i = 0; i < arr.length / 2 + 1; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -201,11 +249,10 @@ public class Main {
             }
             System.out.println();
         }
-
     }
 
-    private static void task7(int arraySize) {
-        int[] arr = Utils.createRandomArr(arraySize, 10, 99);
+    private static void task7() {
+        int[] arr = Utils.createRandomArr(5, 10, 99);
 
         System.out.println(Arrays.toString(arr));
 
@@ -221,8 +268,8 @@ public class Main {
         System.out.println("Array is increasing: false");
     }
 
-    private static void task8(int arraySize) {
-        int[] arr = Utils.createRandomArr(arraySize, 10, 99);
+    private static void task8() {
+        int[] arr = Utils.createRandomArr(5, 10, 99);
         System.out.println(Arrays.toString(arr));
 
         int elementIndex = 0;
