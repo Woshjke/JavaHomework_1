@@ -214,7 +214,6 @@ public class Main {
     }
 
     private static void task6() {
-        Scanner scanner = new Scanner(System.in);
         int sizeX, sizeY;
         System.out.println("Input number of rows:");
         sizeX = Utils.integerInput();
