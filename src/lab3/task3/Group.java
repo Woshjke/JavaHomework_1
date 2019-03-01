@@ -1,4 +1,4 @@
-package lab3;
+package lab3.task3;
 
 import java.util.ArrayList;
 

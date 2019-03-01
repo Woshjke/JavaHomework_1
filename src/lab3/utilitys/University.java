@@ -1,8 +1,8 @@
 package lab3.utilitys;
 
-import lab3.Department;
-import lab3.Group;
-import lab3.Student;
+import lab3.task3.Department;
+import lab3.task3.Group;
+import lab3.task3.Student;
 
 import java.util.ArrayList;
 
