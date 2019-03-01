@@ -5,6 +5,8 @@ import lab3.task3.Group;
 import lab3.task3.Student;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
 
 public class University {
     public static void showDepartments(ArrayList<Department> departments) {
@@ -30,6 +32,7 @@ public class University {
                 arr2.add(val);
             }
         }
+
         return arr2;
     }
 }

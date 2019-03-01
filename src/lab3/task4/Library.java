@@ -10,7 +10,7 @@ public class Library {
     private ArrayList<Book> books;
 
     public void showBooks() {
-        books.forEach(Book::info);
+        books.forEach(Book::showInfo);
     }
 
     public int getNumOfBooks() {
@@ -33,7 +33,7 @@ public class Library {
         }
         for (Book iter : books) {
             if (iter.getYear() >= dateAfter && iter.getYear() <= dateBefore) {
-                iter.info();
+                iter.showInfo();
             }
         }
     }

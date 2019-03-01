@@ -3,6 +3,7 @@ package lab3;
 import lab3.task4.Book;
 import lab3.task4.Library;
 import lab3.task5.TimePeriod;
+import lab3.task6.ATM;
 
 import java.util.ArrayList;
 
@@ -53,8 +54,14 @@ public class Main {
 //
 //        System.out.println(lib.getNumOfAuthors(books));
 
-        TimePeriod timePeriod = new TimePeriod(3600);
-        timePeriod.showPeriodInSeconds();
+//        TimePeriod timePeriod = new TimePeriod(3600);
+//        timePeriod.showPeriodInSeconds();
+
+        ATM atm = new ATM(20,20,20);
+        atm.giveMoney(1001);
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.reverse();
 
     }
 }

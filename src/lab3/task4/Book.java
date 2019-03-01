@@ -39,7 +39,7 @@ public class Book {
         this.year = year;
     }
 
-    public void info() {
+    public void showInfo() {
         System.out.println(author + " - " + bookName + " - " + year);
     }
 }
