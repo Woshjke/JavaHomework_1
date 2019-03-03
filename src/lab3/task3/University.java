@@ -1,9 +1,8 @@
-package lab3.utilitys;
+package lab3.task3;
 
 import lab3.task3.Department;
 import lab3.task3.Group;
 import lab3.task3.Student;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -27,12 +26,12 @@ public class University {
 
     public static ArrayList<Student> getStudentByName (ArrayList<Student> students, String lastName) {
         ArrayList<Student> arr2 = new ArrayList<>();
+
         for (Student val : students) {
             if (val.getLastName().equals(lastName)) {
                 arr2.add(val);
             }
         }
-
         return arr2;
     }
 }

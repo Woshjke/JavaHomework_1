@@ -1,8 +1,6 @@
-package lab3;
+package lab3.task1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 
 public class Belarus {
     public static final String FOUNDING_DATE = "25.08.1991";

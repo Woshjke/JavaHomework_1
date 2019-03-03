@@ -57,11 +57,11 @@ public class Main {
 //        TimePeriod timePeriod = new TimePeriod(3600);
 //        timePeriod.showPeriodInSeconds();
 
-        ATM atm = new ATM(20,20,20);
-        atm.giveMoney(1001);
-
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.reverse();
+//        ATM atm = new ATM(20,20,20);
+//        atm.giveMoney(1001);
+//
+//        StringBuilder stringBuilder = new StringBuilder();
+//        stringBuilder.reverse();
 
     }
 }
