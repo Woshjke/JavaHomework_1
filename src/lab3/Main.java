@@ -4,7 +4,6 @@ import lab3.task4.Book;
 import lab3.task4.Library;
 import lab3.task5.TimePeriod;
 import lab3.task6.ATM;
-
 import java.util.ArrayList;
 
 public class Main {
