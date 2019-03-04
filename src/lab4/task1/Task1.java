@@ -1,11 +1,12 @@
 package lab4.task1;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Task1 {
-
+    /**
+     * Ввод строки с клавиатуры.
+     * Посчитать сколько слов-палиндромов встречается во всей строке и процент слов-палиндромов в строке
+     *
+     * @param originString - исходная строка
+     */
     public static void isPalindrome(String originString) {
         String[] array = originString.split(" ");
         StringBuilder tempStr;

@@ -1,19 +1,23 @@
 package lab4.task4;
 
-import jdk.jfr.Unsigned;
-
 import java.util.Arrays;
 
 public class Task4 {
-    public static void task4(String str) {
+    /**
+     * В веденной строке с клавиатуры поменять слова местами (первое с последним, второе с предпоследним и т.д.).
+     * Слова имеют разную длину.
+     *
+     * @param str - строка
+     */
+    public static void swapElements(String str) {
         String[] array = str.split(" ");
-        String[] outputArray = new String[array.length];
-        int lastIndex = array.length - 1;
+        String[] outputArray = Arrays.copyOf(array, array.length);
+        int indexOfLastElement = array.length - 1;
+        int indexOfMiddle = array.length / 2;
 
-        int halfOfArray = array.length / 2;
-
-        for (int i = 0; i < array.length; i++) {
-            outputArray[i] = array[lastIndex - i];
+        for (int i = 0; i < indexOfMiddle; i++) {
+            outputArray[i] = array[indexOfLastElement - i];
+            outputArray[indexOfLastElement - i] = array[i];
         }
 
         System.out.println(Arrays.toString(outputArray));

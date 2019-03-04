@@ -1,11 +1,5 @@
 package lab3;
 
-import lab3.task4.Book;
-import lab3.task4.Library;
-import lab3.task5.TimePeriod;
-import lab3.task6.ATM;
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) throws Exception {
 //        ArrayList<Student> students = new ArrayList<>();

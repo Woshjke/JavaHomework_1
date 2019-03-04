@@ -1,11 +1,6 @@
 package lab3.task3;
 
-import lab3.task3.Department;
-import lab3.task3.Group;
-import lab3.task3.Student;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Predicate;
 
 public class University {
     public static void showDepartments(ArrayList<Department> departments) {
