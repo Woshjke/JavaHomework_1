@@ -7,7 +7,7 @@ public class Task3 {
      *
      * @param str - строка
      */
-    public static void task3(String str) {
+    public static void countTriplets(String str) {
         int counter = 0;
         char[] array = str.toCharArray();
         for (int i = 0; i < array.length - 2; i++) {

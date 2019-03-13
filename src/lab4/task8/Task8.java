@@ -20,16 +20,10 @@ public class Task8 {
      * И Ь О
      * ПИСЬМО
      *
-     * @param args
+     * @param str1 - Проверяемая строка
+     * @param str2 - Последовательности четных исмволов
+     * @param str3 - Последовательности нечетных исмволов
      */
-    public static void main(String[] args) {
-        execute("аадш", "крна", "карандаш"); //true
-        execute("нг", "киа", "книга"); // true
-        execute("ги", "кна", "книга"); //false
-        execute("лко", "бонт", "блокнот"); // true
-        execute("лкот", "боны", "блокноты"); // false
-    }
-
     private static void execute(String str1, String str2, String str3) {
         System.out.println("Проверяемая строка: " + str3);
         System.out.println("Последовательности четных и нечетных символов: " + str1 + " и " + str2);
@@ -79,5 +73,13 @@ public class Task8 {
         }
 
         return (j == evenLength && i == oddLength);
+    }
+
+    public static void main(String[] args) {
+        execute("аадш", "крна", "карандаш"); //true
+        execute("нг", "киа", "книга"); // true
+        execute("ги", "кна", "книга"); //false
+        execute("лко", "бонт", "блокнот"); // true
+        execute("лкот", "боны", "блокноты"); // false
     }
 }
