@@ -8,7 +8,6 @@ public class Task10 {
      * @return - строка с удаленными html-тегами
      */
     public static String removeHtmlTags(String string) {
-        String outputString = string.replaceAll("\\<.*?>", "");
-        return outputString;
+        return string.replaceAll("<.*?>", "");
     }
 }
