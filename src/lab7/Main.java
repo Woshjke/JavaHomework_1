@@ -7,6 +7,8 @@ import lab7.task1.TeamPlayerImpl;
 import lab7.task2.Task2;
 import lab7.task2.Week;
 import lab7.task3.MathOperator;
+import lab7.task5.Student;
+import lab7.task5.StudentComparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,6 +53,13 @@ public class Main {
 
         MathOperator e = MathOperator.ADD;
         System.out.println(e.execute(1, 3));
+
+        Student st1 = new Student("Evgen", 19, 7.2);
+        Student st2 = new Student("Pasha", 20, 9.3);
+
+        System.out.println(StudentComparator.RESULT.compare(st1, st2));
+        StudentComparator.NAME.log("Massage", st1);
+
 
     }
 }

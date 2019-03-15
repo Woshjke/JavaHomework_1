@@ -1,23 +1,30 @@
 package lab7.task5;
 
 public class Student {
+
     private String name;
-    private String age;
+    private int age;
     private double averageScore;
 
-    public String getName() {
+    public Student(String name, int age, double averageScore) {
+        this.name = name;
+        this.age = age;
+        this.averageScore = averageScore;
+    }
+
+    String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public String getAge() {
+    int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    void setAge(int age) {
         this.age = age;
     }
 
@@ -25,7 +32,16 @@ public class Student {
         return averageScore;
     }
 
-    public void setAvarageScore(double averageScore) {
+    void setAvarageScore(double averageScore) {
         this.averageScore = averageScore;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", averageScore=" + averageScore +
+                '}';
     }
 }
