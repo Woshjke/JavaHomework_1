@@ -16,9 +16,9 @@ public class Task3 {
         try {
             fileInputStream = new FileInputStream("D:\\file.txt");
 
-            int readedChar;
-            while ((readedChar = fileInputStream.read()) != -1) {
-                System.out.print((char) readedChar);
+            int readChar;
+            while ((readChar = fileInputStream.read()) != -1) {
+                System.out.print((char) readChar);
             }
         } catch (IOException e) {
             System.out.println("Ошибка");
