@@ -1,6 +1,7 @@
 package lab7.task6.plans;
 
 public class HousePlan {
+
     private int basementPlan;
     private int wallsPlan;
     private int windowsPlan;
@@ -10,7 +11,7 @@ public class HousePlan {
     public HousePlan() {
         basementPlan = 1;
         wallsPlan = 4;
-        windowsPlan = 2;
+        windowsPlan = 4;
         doorsPlan = 1;
         roofPlan = 1;
     }

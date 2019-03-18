@@ -4,6 +4,7 @@ import lab7.task6.plans.HousePlan;
 import lab7.task6.buildings.House;
 
 public abstract class AbstractHouseBuilder {
+
     House house;
     HousePlan plan;
 

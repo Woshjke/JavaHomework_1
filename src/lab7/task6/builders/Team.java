@@ -84,5 +84,14 @@ public class Team {
         return getHouse();
     }
 
+    public void alreadyBuild() {
+        System.out.println("Already build: " +
+                "\nBasement: " + getHouse().getBasement() +
+                "\nWalls: " + getHouse().getWalls() +
+                "\nWindows: " + getHouse().getWindows() +
+                "\nDoors: " + getHouse().getDoors() +
+                "\nRoof: " + getHouse().getRoof());
+    }
+
 
 }

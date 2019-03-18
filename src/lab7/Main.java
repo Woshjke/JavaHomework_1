@@ -9,6 +9,8 @@ import lab7.task2.Week;
 import lab7.task3.MathOperator;
 import lab7.task5.Student;
 import lab7.task5.StudentComparator;
+import lab7.task6.builders.Director;
+import lab7.task6.buildings.House;
 
 public class Main {
     public static void main(String[] args) {
@@ -60,6 +62,11 @@ public class Main {
         System.out.println(StudentComparator.RESULT.compare(st1, st2));
         StudentComparator.NAME.log("Massage", st1);
 
+        //Task7
+        Director director = new Director();
+        House house = director.buildHouse();
 
+        System.out.println(house.toString());
+        director.showProgress();
     }
 }

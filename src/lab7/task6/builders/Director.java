@@ -42,6 +42,7 @@ public class Director {
     }
 
     public void showProgress() {
+        getTeam().alreadyBuild();
         double progress = ((double) (team.getHouse().buildParts() / plan.getCountOfParts())) * 100;
         System.out.println("Build progress: " + progress + "%");
     }
