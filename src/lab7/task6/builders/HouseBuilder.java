@@ -1,7 +1,7 @@
 package lab7.task6.builders;
 
-import lab7.task6.plans.HousePlan;
 import lab7.task6.buildings.House;
+import lab7.task6.plans.HousePlan;
 
 public class HouseBuilder extends AbstractHouseBuilder {
 

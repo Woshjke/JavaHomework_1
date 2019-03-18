@@ -4,7 +4,6 @@ import lab7.task1.AllOverParticipantImpl;
 import lab7.task1.JumpingAthleteImpl;
 import lab7.task1.SwimmingAthleteImpl;
 import lab7.task1.TeamPlayerImpl;
-import lab7.task2.Task2;
 import lab7.task2.Week;
 import lab7.task3.MathOperator;
 import lab7.task5.Student;

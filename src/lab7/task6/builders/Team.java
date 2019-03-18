@@ -1,7 +1,5 @@
 package lab7.task6.builders;
 
-import lab7.task6.builders.AbstractHouseBuilder;
-import lab7.task6.builders.HouseBuilder;
 import lab7.task6.buildings.House;
 import lab7.task6.plans.HousePlan;
 

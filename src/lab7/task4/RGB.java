@@ -1,7 +1,5 @@
 package lab7.task4;
 
-import java.awt.*;
-
 /**
  * Создать enum RGB с 3 полями(r,g,b) и значениями основных цветов радуги: black, white, red, green, yellow, blue, pink, gray, brown, orange, purple.
  * Реализовать методы:
