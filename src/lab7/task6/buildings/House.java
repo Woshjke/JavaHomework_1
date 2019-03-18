@@ -1,8 +1,9 @@
 package lab7.task6.buildings;
 
+import lab7.task6.interfaces.IBuilding;
 import lab7.task6.partsOfBuildings.*;
 
-public class House {
+public class House implements IBuilding {
 
     private Basement basement;
     private Wall walls;

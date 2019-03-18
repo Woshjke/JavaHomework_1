@@ -1,6 +1,8 @@
 package lab7.task6.plans;
 
-public class HousePlan {
+import lab7.task6.interfaces.IPlan;
+
+public class HousePlan implements IPlan {
 
     private int basementPlan;
     private int wallsPlan;

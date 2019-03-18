@@ -1,9 +1,11 @@
 package lab7.task6.builders;
 
+import lab7.task6.interfaces.IBuilder;
+import lab7.task6.interfaces.IBuilding;
 import lab7.task6.plans.HousePlan;
 import lab7.task6.buildings.House;
 
-public abstract class AbstractHouseBuilder {
+public abstract class AbstractHouseBuilder implements IBuilder {
 
     House house;
     HousePlan plan;
@@ -12,11 +14,11 @@ public abstract class AbstractHouseBuilder {
         this.house = new House();
     }
 
-    public House getHouse() {
+    public House getBuilding() {
         return house;
     }
 
-    public void setHouse(House house) {
+    public void setBuilding(House house) {
         this.house = house;
     }
 
