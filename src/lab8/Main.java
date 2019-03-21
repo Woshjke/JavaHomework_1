@@ -31,6 +31,8 @@ public class Main {
         stringStackArray.push("World");
         System.out.println(stringStackArray.pop());
         System.out.println(stringStackArray.pop());
+        stringStackArray.clear();
+        System.out.println(stringStackArray.isEmpty());
         System.out.println("Stack size: " + stringStackArray.size());
 
 
