@@ -4,7 +4,7 @@ import lab8.task1.Encoder;
 import lab8.task2.CompanyList;
 import lab8.task2.UserElement;
 import lab8.task3.StackArray;
-import lab8.task4.Sort;
+import lab8.task4.GenericArraySort;
 
 import java.util.Calendar;
 
@@ -40,12 +40,11 @@ public class Main {
         Integer[] arr = new Integer[]{2, 3, 4, 7, 10, 1, 100, 1024};
         Character[] arr2 = new Character[]{'b', 'a', 'c', 'w', 'i', 'k'};
 
-        Sort<Integer> sort = new Sort<>(arr);
-        Sort<Character> sort2 = new Sort<>(arr2);
-        sort2.sort();
-        sort.sort();
-        System.out.println(sort2);
-        System.out.println(sort);
+        GenericArraySort<Integer> arrayToSort = new GenericArraySort<>(arr);
+        GenericArraySort<Character> arrayToSort2 = new GenericArraySort<>(arr2);
+        arrayToSort2.sort();
+        arrayToSort.sort();
+        System.out.println(arrayToSort2);
+        System.out.println(arrayToSort);
     }
-
 }

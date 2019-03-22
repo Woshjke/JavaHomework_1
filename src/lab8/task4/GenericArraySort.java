@@ -2,25 +2,25 @@ package lab8.task4;
 
 import java.util.Arrays;
 
-public class Sort<T extends Comparable> {
+public class GenericArraySort<T extends Comparable> {
     private T[] array;
     private int len;
 
-    public Sort(T[] array) {
+    public GenericArraySort(T[] array) {
         this.array = array;
         len = array.length;
     }
 
     public void sort() {
-        quickSort(0, len - 1);
+        recursiveQuickSort(0, len - 1);
     }
 
-    private void quickSort(int left, int right) {
+    private void recursiveQuickSort(int left, int right) {
         if (!(right - left <= 0)) {
             T pivot = array[right];
             int partition = partition(left, right, pivot);
-            quickSort(left, partition - 1);
-            quickSort(partition + 1, right);
+            recursiveQuickSort(left, partition - 1);
+            recursiveQuickSort(partition + 1, right);
         }
     }
 
@@ -48,16 +48,16 @@ public class Sort<T extends Comparable> {
         return leftPtr;
     }
 
-    private void swap(int dex1, int dex2) {
+    private void swap(int first, int second) {
         T temp;
-        temp = array[dex1];
-        array[dex1] = array[dex2];
-        array[dex2] = temp;
+        temp = array[first];
+        array[first] = array[second];
+        array[second] = temp;
     }
 
     @Override
     public String toString() {
-        return "Sort{" +
+        return "GenericArraySort{" +
                 "array=" + Arrays.toString(array) +
                 '}';
     }

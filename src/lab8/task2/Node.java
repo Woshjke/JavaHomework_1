@@ -10,7 +10,6 @@ public class Node<T> {
         this.next = next;
     }
 
-    // Setter getter methods for Data and Next Pointer
     public void setData(T data) {
         this.data = data;
     }

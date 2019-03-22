@@ -2,16 +2,10 @@ package lab7.task7.classes;
 
 import lab7.task7.CoffeeDrink;
 import lab7.task7.GroudCoffee;
-import lab7.task7.interfaces.EspressoCoffeeMachine;
 import lab7.task7.interfaces.FilterCoffeeMachine;
+import lab7.task7.interfaces.NewTypeCoffee;
 
-public class MultiCoffeeMachine implements FilterCoffeeMachine, EspressoCoffeeMachine {
-
-    @Override
-    public CoffeeDrink brewEspresso() {
-        return null;
-    }
-
+public class NewTypeCoffeeMachine implements FilterCoffeeMachine, NewTypeCoffee {
     @Override
     public CoffeeDrink brewFilterCoffee() {
         return null;
@@ -20,5 +14,10 @@ public class MultiCoffeeMachine implements FilterCoffeeMachine, EspressoCoffeeMa
     @Override
     public void addGroundCoffee(GroudCoffee coffee) {
 
+    }
+
+    @Override
+    public CoffeeDrink brewNewTypeOfCoffee() {
+        return null;
     }
 }

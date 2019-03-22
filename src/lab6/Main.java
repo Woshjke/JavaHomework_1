@@ -26,7 +26,7 @@ public class Main {
         Task3.execute();
 
 
-        //Task4
+        //GenericArraySort
         Task4.execute();
 
         //Task7
