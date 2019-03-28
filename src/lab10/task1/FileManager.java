@@ -42,7 +42,7 @@ public class FileManager {
                 break;
             }
             case "ls": {
-                new LsCommand();
+                new LsCommand().executeCommand();
                 break;
             }
             case "find": {
@@ -66,6 +66,7 @@ public class FileManager {
                 break;
             }
             default: {
+                System.out.println("No such command found");
                 break;
             }
         }

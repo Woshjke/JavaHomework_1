@@ -9,8 +9,8 @@ public class Main {
         String command = "";
 
         while (!command.equals("exit")) {
-            Scanner scanner = new Scanner(System.in);
             System.out.println("Input command: ");
+            Scanner scanner = new Scanner(System.in);
             command = scanner.nextLine();
             FileManager.execute(command);
         }
